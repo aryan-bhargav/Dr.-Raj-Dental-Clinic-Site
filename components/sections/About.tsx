@@ -1,66 +1,69 @@
-'use client'
+'use client';
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react';
+import Image, { StaticImageData } from 'next/image';
+import team2 from '../../assets/team2.png';
 
-const teamPhotos = [
+// Type the array to accept both strings (URLs) and Next.js static image objects
+const teamPhotos: (string | StaticImageData)[] = [
   'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80',
-  'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&q=80',
-]
+  team2,
+];
 
 const sentence =
-  'We deliver personalized dental treatments with modern technology and gentle care ensuring healthy confident smiles for every patient.'
+  'We deliver personalized dental treatments with modern technology and gentle care ensuring healthy confident smiles for every patient.';
 
-const words = sentence.split(' ')
+const words = sentence.split(' ');
 
 // Words to highlight in teal
-const tealWords = ['modern', 'technology']
+const tealWords = ['modern', 'technology'];
 
 export default function About() {
-  const [visibleStats, setVisibleStats] = useState(false)
-  const [scrollProgress, setScrollProgress] = useState(0)
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const textRef = useRef<HTMLParagraphElement>(null)
-  const statsRef = useRef<HTMLDivElement>(null)
+  const [visibleStats, setVisibleStats] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLParagraphElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Stats reveal
     const statsObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisibleStats(true)
-          statsObserver.disconnect()
+          setVisibleStats(true);
+          statsObserver.disconnect();
         }
       },
       { threshold: 0.2 }
-    )
-    if (statsRef.current) statsObserver.observe(statsRef.current)
+    );
+    if (statsRef.current) statsObserver.observe(statsRef.current);
 
     // Scroll-based word reveal
     const handleScroll = () => {
-      if (!textRef.current) return
-      const rect = textRef.current.getBoundingClientRect()
-      const windowHeight = window.innerHeight
+      if (!textRef.current) return;
+      const rect = textRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
-      // Start revealing when top of element hits 80% of viewport
+      // Start revealing when top of element hits 85% of viewport
       // Fully revealed when top hits 60% of viewport
-      const start = windowHeight * 0.85
-      const end = windowHeight * 0.6
+      const start = windowHeight * 0.85;
+      const end = windowHeight * 0.6;
 
       const progress = Math.min(
         Math.max((start - rect.top) / (start - end), 0),
         1
-      )
-      setScrollProgress(progress)
-    }
+      );
+      setScrollProgress(progress);
+    };
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    handleScroll() // run once on mount
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // run once on mount
 
     return () => {
-      window.removeEventListener('scroll', handleScroll)
-      statsObserver.disconnect()
-    }
-  }, [])
+      window.removeEventListener('scroll', handleScroll);
+      statsObserver.disconnect();
+    };
+  }, []);
 
   return (
     <section id="about" ref={sectionRef} className="py-24 bg-white overflow-hidden">
@@ -78,9 +81,12 @@ export default function About() {
               aria-label={sentence}
             >
               {words.map((word, i) => {
-                const wordThreshold = i / words.length
-                const revealed = scrollProgress >= wordThreshold
-                const isTeal = tealWords.includes(word.replace(/[^a-zA-Z]/g, ''))
+                const wordThreshold = i / words.length;
+                const revealed = scrollProgress >= wordThreshold;
+                
+                // Added .toLowerCase() to ensure capitalized words still match your tealWords array
+                const cleanWord = word.replace(/[^a-zA-Z]/g, '').toLowerCase();
+                const isTeal = tealWords.includes(cleanWord);
 
                 return (
                   <span
@@ -98,7 +104,7 @@ export default function About() {
                   >
                     {word}
                   </span>
-                )
+                );
               })}
             </p>
 
@@ -108,10 +114,16 @@ export default function About() {
                 {teamPhotos.map((src, i) => (
                   <div
                     key={i}
-                    className="w-12 h-12 rounded-xl border-2 border-white overflow-hidden shadow-md hover:-translate-y-1 transition-transform duration-200"
+                    className="w-12 h-12 rounded-xl border-2 border-white overflow-hidden shadow-md hover:-translate-y-1 transition-transform duration-200 relative"
                     style={{ zIndex: i }}
                   >
-                    <img src={src} alt="Team member" className="w-full h-full object-cover" />
+                    <Image 
+                      src={src} 
+                      alt={`Team member ${i + 1}`} 
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover" 
+                    />
                   </div>
                 ))}
               </div>
@@ -152,5 +164,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

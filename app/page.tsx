@@ -6,12 +6,12 @@ import Features from '@/components/sections/Features'
 import WhyChoose from '@/components/sections/WhyChoose'
 import Blog from '@/components/sections/Blog'
 import Newsletter from '@/components/sections/Newsletter'
-import Footer from '@/components/layout/Footer'
+import Footer from '@/components/layout/footer/Footer'
+import LocationSection from '@/components/sections/locations/Locationsection'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white overflow-x-hidden">
-      <Navbar />
       <Hero />
       <StepsBar />
       <About />
@@ -19,7 +19,7 @@ export default function Home() {
       <WhyChoose />
       <Blog />
       <Newsletter />
-      <Footer />
+      <LocationSection/>
     </main>
   )
 }

@@ -1,8 +1,11 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image, { StaticImageData } from 'next/image';
+import team2 from '../../assets/team2.png';
 
 export default function Features() {
+
   const [visible, setVisible] = useState(false)
   const [progress, setProgress] = useState(0)
   const ref = useRef<HTMLDivElement>(null)
@@ -43,7 +46,7 @@ export default function Features() {
             {/* Patient image */}
             <div className="relative rounded-2xl overflow-hidden h-48 bg-gray-200">
               <img
-                src="https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=500&q=80"
+                src="https://images.unsplash.com/photo-1728342057953-94bfad8f0e7e"
                 alt="Patient at dentist"
                 className="w-full h-full object-cover"
               />
@@ -125,7 +128,7 @@ export default function Features() {
                 >
                   Book
                   <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                    <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </a>
               </div>
@@ -136,26 +139,28 @@ export default function Features() {
 
             {/* Doctor image - video call style */}
             <div className="relative rounded-2xl overflow-hidden h-64 bg-blue-50">
-              <img
-                src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=500&q=80"
-                alt="Dr. Daniel Carter"
+              <Image
+                src={team2}
+                alt="Dr. Raj Dental Clinic"
+                width={480}
+                height={480}
                 className="w-full h-full object-cover object-top"
               />
               {/* Video call controls */}
               <div className="absolute bottom-4 right-4 flex flex-col gap-2">
                 <button className="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white shadow-lg hover:bg-red-600 transition-colors">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/>
+                    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
                   </svg>
                 </button>
                 <button className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-gray-700 shadow-lg hover:bg-white transition-colors">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="7" width="13" height="10" rx="2"/><path d="M22 7l-7 5 7 5V7z"/>
+                    <rect x="2" y="7" width="13" height="10" rx="2" /><path d="M22 7l-7 5 7 5V7z" />
                   </svg>
                 </button>
                 <button className="w-10 h-10 rounded-full bg-white/90 flex items-center justify-center text-gray-700 shadow-lg hover:bg-white transition-colors">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/>
+                    <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8" />
                   </svg>
                 </button>
               </div>

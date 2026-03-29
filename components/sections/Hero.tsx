@@ -138,10 +138,7 @@ export default function Hero() {
             {/* Right: Service Pills */}
             <div className="hidden lg:flex flex-col items-end gap-3">
               <div className="flex items-center gap-3 mb-6 text-white/50 text-sm">
-                <span>Preview</span>
-                <span className="text-white font-medium">01 / 08</span>
-                <button className="text-white/70 hover:text-white transition-colors">Next</button>
-                <div className="ml-4 text-right text-xs text-white/40 uppercase tracking-wider">Scroll for More</div>
+                
               </div>
               <div className="flex flex-col gap-2.5">
                 {serviceTags.map((tag, i) => (

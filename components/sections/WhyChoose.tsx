@@ -1,7 +1,9 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-
+import Image, { StaticImageData } from 'next/image';
+import team2 from '../../assets/team2.png';
+import testimonialLogo from "../../assets/testimonial.jpg"
 const testimonials = [
   {
     quote: "We deliver personalized dental treatments modern technology and gentle care ensuring healthy confident smiles for every patient.",
@@ -89,7 +91,7 @@ export default function WhyChoose() {
             <div className="bg-[#2BBCD4] rounded-2xl p-5 text-white">
               <div className="flex items-center gap-2 mb-3">
                 <div className="flex -space-x-2">
-                  {[1,2,3].map(i => (
+                  {[1, 2, 3].map(i => (
                     <div key={i} className="w-7 h-7 rounded-full bg-white/30 border-2 border-white overflow-hidden">
                       <img
                         src={`https://randomuser.me/api/portraits/thumb/${i % 2 === 0 ? 'women' : 'men'}/${i * 10}.jpg`}
@@ -103,7 +105,7 @@ export default function WhyChoose() {
                 <span className="text-sm font-semibold">3.5K+ join the smiles</span>
               </div>
               <div className="inline-flex items-center gap-1.5 bg-white/20 rounded-full px-3 py-1 mb-3">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
                 <span className="text-xs font-semibold">Rewards</span>
               </div>
               <p className="text-sm leading-relaxed text-white/90">
@@ -125,13 +127,13 @@ export default function WhyChoose() {
                 onClick={() => setTestimonialIdx((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
                 className="w-10 h-10 rounded-full bg-[#2BBCD4] flex items-center justify-center text-white hover:bg-[#1A94AA] transition-colors"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 19V5M5 12l7-7 7 7" /></svg>
               </button>
               <button
                 onClick={() => setTestimonialIdx((prev) => (prev + 1) % testimonials.length)}
                 className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-50 transition-colors"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12l7 7 7-7" /></svg>
               </button>
             </div>
 
@@ -146,10 +148,11 @@ export default function WhyChoose() {
             {/* Avatar nav */}
             <div className="flex items-start justify-between">
               <div className="relative w-24 h-24 rounded-2xl overflow-hidden bg-gray-200 shadow-md">
-                <img
-                  key={testimonialIdx}
-                  src={t.photo}
+                <Image
+                  src={testimonialLogo}
                   alt={t.name}
+                  width={100}
+                  height={100}
                   className="w-full h-full object-cover animate-fade-in"
                 />
               </div>
@@ -158,13 +161,13 @@ export default function WhyChoose() {
                   onClick={() => setTestimonialIdx((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
                   className="w-10 h-10 rounded-full bg-[#2BBCD4] flex items-center justify-center text-white hover:bg-[#1A94AA] transition-colors"
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 19V5M5 12l7-7 7 7" /></svg>
                 </button>
                 <button
                   onClick={() => setTestimonialIdx((prev) => (prev + 1) % testimonials.length)}
                   className="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-700 hover:bg-gray-50 transition-colors"
                 >
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 5v14M5 12l7 7 7-7" /></svg>
                 </button>
               </div>
             </div>
@@ -201,10 +204,10 @@ export default function WhyChoose() {
                   <p className="text-sm font-semibold text-gray-700">2,000+ served</p>
                 </div>
                 <div className="relative w-20 h-20 rounded-xl overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&q=80"
+                  <Image
+                    src={team2}
                     alt="Happy patient"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
               </div>
