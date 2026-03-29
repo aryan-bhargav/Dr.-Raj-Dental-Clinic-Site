@@ -45,8 +45,8 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-          ? 'bg-white/90 backdrop-blur-xl shadow-sm py-3'
-          : 'bg-transparent py-5'
+        ? 'bg-white/90 backdrop-blur-xl shadow-sm py-3'
+        : 'bg-transparent/10 py-5'
         }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
@@ -60,10 +60,10 @@ export default function Navbar() {
         <nav className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => {
             const baseClass = `px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeLink === link.label
-                ? 'bg-white text-gray-900 shadow-sm'
-                : scrolled
-                  ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                  : 'text-white/80 hover:text-white hover:bg-white/10'
+              ? 'bg-white text-gray-900 shadow-sm'
+              : scrolled
+                ? 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                : 'text-white/80 hover:text-white hover:bg-white/10'
               }`
 
             if (link.label === 'Services') {
@@ -161,16 +161,49 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-xl transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-4 py-4 flex flex-col gap-2">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => { setActiveLink(link.label); setMenuOpen(false) }}
-              className="px-4 py-3 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-[#2BBCD4] transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            if (link.label === 'Services') {
+              return (
+                <div key={link.label}>
+                  <button
+                    onClick={() => setOpenDropdown((prev) => !prev)}
+                    className="px-4 py-3 text-left w-full text-sm font-medium text-gray-700"
+                  >
+                    Services ▾
+                  </button>
+
+                  {openDropdown && (
+                    <div className="pl-4">
+                      {servicesDropdown.map((item, index) => (
+                        <a
+                          key={index}
+                          href="#services"
+                          className="block px-4 py-2 text-sm text-gray-600"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {item}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )
+            }
+
+            return (
+              <a
+                key={link.label}
+                href={link.href}
+                onClick={() => {
+                  setActiveLink(link.label)
+                  setMenuOpen(false)
+                }}
+                className="px-4 py-3 rounded-xl text-sm font-medium text-gray-700"
+              >
+                {link.label}
+              </a>
+            )
+          })}
 
           {/* Mobile WhatsApp */}
           <a

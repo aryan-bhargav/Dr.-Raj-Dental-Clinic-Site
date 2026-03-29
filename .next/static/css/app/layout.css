@@ -1290,6 +1290,15 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(9 9 11 / var(--tw-bg-opacity, 1));
 }
+.bg-transparent\/40 {
+  background-color: rgb(0 0 0 / 0.4);
+}
+.bg-transparent\/90 {
+  background-color: rgb(0 0 0 / 0.9);
+}
+.bg-transparent\/10 {
+  background-color: rgb(0 0 0 / 0.1);
+}
 .bg-gradient-to-b {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -1455,6 +1464,12 @@ video {
 }
 .pt-8 {
   padding-top: 2rem;
+}
+.pl-4 {
+  padding-left: 1rem;
+}
+.text-left {
+  text-align: left;
 }
 .text-center {
   text-align: center;
