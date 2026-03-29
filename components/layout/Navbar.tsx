@@ -159,7 +159,9 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-xl transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div
+        className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-xl transition-all duration-300 
+  ${menuOpen ? 'max-h-[80vh] opacity-100 overflow-y-auto' : 'max-h-0 opacity-0 overflow-hidden'}`}>
         <div className="px-4 py-4 flex flex-col gap-2">
           {navLinks.map((link) => {
             if (link.label === 'Services') {
