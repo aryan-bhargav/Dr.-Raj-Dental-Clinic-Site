@@ -6,7 +6,7 @@ const serviceTags = ['Dental Checkup', 'Teeth Cleaning', 'Tooth Filling', 'Gum T
 
 const PHONE_NUMBER = '9953070999'
 const WHATSAPP_NUMBER = '919953070999'
-const WHATSAPP_MESSAGE = 'Hello! I would like to book a dental appointment at Dentora Clinic.'
+const WHATSAPP_MESSAGE = 'Hello! I would like to book a dental appointment at Dr. Raj Dental Clinic.'
 
 export default function Hero() {
   const [mounted, setMounted] = useState(false)

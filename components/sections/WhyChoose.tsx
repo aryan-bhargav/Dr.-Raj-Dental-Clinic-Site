@@ -12,8 +12,8 @@ const testimonials = [
     photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80',
   },
   {
-    quote: "The team at Dentora made me feel so comfortable. My smile has never looked better and the care was exceptional!",
-    name: 'Michael Thompson',
+    quote: "The team at Dr. Raj Dental Clinic made me feel so comfortable. My smile has never looked better and the care was exceptional!",
+    name: 'Amit sharma',
     role: 'Happy Patient',
     photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80',
   },
