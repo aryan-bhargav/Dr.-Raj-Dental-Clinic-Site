@@ -1462,6 +1462,9 @@ video {
 .pt-8 {
   padding-top: 2rem;
 }
+.pb-8 {
+  padding-bottom: 2rem;
+}
 .text-left {
   text-align: left;
 }
@@ -2032,6 +2035,21 @@ body {
 
 .hover\:bg-zinc-800\/60:hover {
   background-color: rgb(39 39 42 / 0.6);
+}
+
+.hover\:bg-\[\#1da5bc\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 165 188 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#20bd5a\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(32 189 90 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-gray-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-\[\#2BBCD4\]:hover {
