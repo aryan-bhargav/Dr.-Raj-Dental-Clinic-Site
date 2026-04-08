@@ -46,7 +46,7 @@ export default function LocationSection() {
       <ul className="sr-only">
         {LOCATIONS.map((loc) => (
           <li key={loc.slug}>
-            <a href={loc.href}>Best Dentist in {loc.name} Near Me</a>
+            <a href={loc.href}>Best Hospital in {loc.name} Near Me</a>
           </li>
         ))}
       </ul>

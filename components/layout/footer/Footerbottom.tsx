@@ -1,5 +1,4 @@
 import { BRAND } from "./Footerdata";
-import { ToothIcon } from "./Footericons";
 
 export default function FooterBottom() {
   return (

@@ -31,12 +31,12 @@ export default function Features() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Section tag */}
         <div className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <span className="text-xs font-semibold text-gray-400 tracking-widest uppercase block mb-3">Feature Treatment</span>
+          <span className="text-xs font-semibold text-gray-400 tracking-widest uppercase block mb-3">Featured Care</span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 max-w-md leading-tight">
-            Advanced Dental Care for a Healthier Smile
+            Advanced Healthcare for a Healthier Family
           </h2>
           <p className="text-gray-500 mt-4 max-w-md text-sm leading-relaxed">
-            Join hundreds of patients achieving healthier, brighter smiles through expert dental care and personalized treatments.
+            Join thousands of patients achieving better health through expert medical care and personalized treatments.
           </p>
         </div>
 
@@ -46,15 +46,15 @@ export default function Features() {
             {/* Patient image */}
             <div className="relative rounded-2xl overflow-hidden h-48 bg-gray-200">
               <img
-                src="https://images.unsplash.com/photo-1728342057953-94bfad8f0e7e"
-                alt="Patient at dentist"
+                src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=600&q=80"
+                alt="Patient at hospital"
                 className="w-full h-full object-cover"
               />
             </div>
 
             {/* Stats */}
             <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
-              <p className="text-xs text-gray-400 tracking-wider uppercase mb-4">Thousands Trust Us for Smiles!</p>
+              <p className="text-xs text-gray-400 tracking-wider uppercase mb-4">Thousands Trust Us for Health!</p>
               <div className="space-y-3">
                 <div>
                   <span className="text-3xl font-bold text-gray-900">98%</span>
@@ -62,7 +62,7 @@ export default function Features() {
                 </div>
                 <div>
                   <span className="text-3xl font-bold text-gray-900">2k+</span>
-                  <span className="text-sm text-gray-500 ml-2">Smiles Transformed</span>
+                  <span className="text-sm text-gray-500 ml-2">Patients Treated</span>
                 </div>
                 <div>
                   <span className="text-3xl font-bold text-gray-900">4.9★</span>
@@ -76,16 +76,16 @@ export default function Features() {
           <div className={`transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="relative rounded-2xl overflow-hidden h-full min-h-[400px] bg-gray-200">
               <img
-                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80"
-                alt="Dental clinic"
+                src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600&q=80"
+                alt="Hospital facility"
                 className="w-full h-full object-cover"
               />
               {/* Overlay stats card */}
               <div className="absolute bottom-4 right-4 bg-white rounded-2xl p-4 shadow-lg min-w-[180px]">
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <p className="text-xs text-gray-400 mb-1">Average Treatment Time</p>
-                    <p className="text-2xl font-bold text-gray-900">40 <span className="text-sm font-normal">Mins</span></p>
+                    <p className="text-xs text-gray-400 mb-1">Average Consultation</p>
+                    <p className="text-2xl font-bold text-gray-900">30 <span className="text-sm font-normal">Mins</span></p>
                   </div>
                   <div className="text-xs text-[#2BBCD4] font-semibold">60%</div>
                 </div>
@@ -114,8 +114,8 @@ export default function Features() {
             <div className="bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900">Dr. Raj</h3>
-                  <p className="text-sm text-gray-500">Lead Dental Specialist</p>
+                  <h3 className="text-xl font-bold text-gray-900">Expert Team</h3>
+                  <p className="text-sm text-gray-500">Mukta Medicare Specialists</p>
                   <div className="flex items-center gap-1 mt-1">
                     <span className="text-yellow-400 text-sm">★</span>
                     <span className="text-sm font-semibold text-gray-700">4.9</span>
@@ -133,7 +133,7 @@ export default function Features() {
                 </a>
               </div>
               <p className="text-xs text-gray-500 leading-relaxed">
-                Join hundreds of patients achieving healthier, brighter smiles through expert dental care and personalized treatments.
+                Join thousands of patients achieving better health through expert medical care and personalized treatments.
               </p>
             </div>
 
@@ -141,7 +141,7 @@ export default function Features() {
             <div className="relative rounded-2xl overflow-hidden h-64 bg-blue-50">
               <Image
                 src={team2}
-                alt="Dr. Raj Dental Clinic"
+                alt="Mukta Medicare Team"
                 width={480}
                 height={480}
                 className="w-full h-full object-cover object-top"

@@ -4,36 +4,40 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../../assets/logoT.png'
+
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
   { label: 'About Us', href: '#about' },
   { label: 'Testimonial', href: '#testimonial' },
-  { label: 'Clinic Tour', href: '#clinictour' },
+  { label: 'Hospital Tour', href: '#clinictour' },
   { label: 'Gallery', href: '#gallery' },
   { label: 'Contact', href: '#contact' },
   { label: 'Enquiry', href: '#enquiry' }
 ]
+
 const servicesDropdown = [
-  'Dental Implants',
-  'Orthodontics / Braces',
-  'Root Canal Treatment',
-  'Smile Makeover',
-  'Paediatric / Kids Dentistry',
-  'Instant Teeth Whitening',
-  'Cosmetic Dentistry',
-  'Restoration With Crowns And Bridges',
-  'Diastema Closure With Composite',
+  'General Medicine',
+  'Pediatrics / Child Care',
+  'Orthopedics',
+  'Gynecology & Obstetrics',
+  'Cardiology',
+  'Dermatology',
+  'ENT Specialist',
+  'Physiotherapy',
+  'Health Checkup Packages',
 ]
+
 // 👇 Replace with your actual WhatsApp number (with country code, no + or spaces)
 const WHATSAPP_NUMBER = '919953070999'
-const WHATSAPP_MESSAGE = 'Hello! I would like to book a dental appointment.'
+const WHATSAPP_MESSAGE = 'Hello! I would like to book a medical appointment at Mukta Medicare.'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeLink, setActiveLink] = useState('Home')
   const [openDropdown, setOpenDropdown] = useState(false)
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', handleScroll)
@@ -53,7 +57,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 group">
-          <Image src={Logo} alt="Dr Raj Dental Clinic" width={150} height={50} />
+          <Image src={Logo} alt="Mukta Medicare" width={150} height={50} />
         </Link>
 
         {/* Desktop Nav */}

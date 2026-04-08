@@ -5,33 +5,33 @@ import { useEffect, useRef, useState } from 'react'
 const blogPosts = [
   {
     id: 1,
-    category: 'Dental Health',
+    category: 'Preventive Care',
     image: 'https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=600&q=80',
     author: 'Sarah Johnson',
     authorPhoto: 'https://randomuser.me/api/portraits/women/44.jpg',
     readTime: '10 Min read',
     date: 'March 12, 2026',
-    title: 'Professional Cleaning vs. Regular Brushing',
+    title: 'The Importance of Routine Health Checkups',
   },
   {
     id: 2,
-    category: 'Dental Health',
+    category: 'General Health',
     image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80',
     author: 'Nataly Birch',
     authorPhoto: 'https://randomuser.me/api/portraits/women/65.jpg',
     readTime: '10 Min read',
     date: 'March 12, 2026',
-    title: "Important signs that indicate it's time to visit dentist",
+    title: "Important signs that indicate it's time to visit a doctor",
   },
   {
     id: 3,
-    category: 'Dental Health',
+    category: 'Pediatrics',
     image: 'https://images.unsplash.com/photo-1609840114035-3c981b3f6361?w=600&q=80',
     author: 'Cody Fisher',
     authorPhoto: 'https://randomuser.me/api/portraits/men/22.jpg',
     readTime: '6 Min read',
     date: 'March 12, 2026',
-    title: 'Professional Cleaning vs. Regular Brushing',
+    title: 'Essential Child Healthcare Tips for Parents',
   },
 ]
 
@@ -56,9 +56,9 @@ export default function Blog() {
           <div>
             <span className="text-xs font-semibold text-gray-400 tracking-widest uppercase block mb-3">Our Insights</span>
             <h2 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-900">
-              Advanced Dental Care Ensures<br />
+              Advanced Medical Care Ensures<br />
               <span className="text-gray-400">Precision Comfort And Long</span><br />
-              Lasting Healthy Smiles.
+              Lasting Healthy Lives.
             </h2>
           </div>
           <a

@@ -11,8 +11,8 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Dr. Raj Dental Clinic – Family-Friendly Dental Care',
-  description: 'Advanced dental care ensuring precision comfort and lasting healthy smiles.',
+  title: 'Mukta Medicare – Family-Friendly Hospital',
+  description: 'The care you need. The compassion you deserve',
 }
 
 export default function RootLayout({

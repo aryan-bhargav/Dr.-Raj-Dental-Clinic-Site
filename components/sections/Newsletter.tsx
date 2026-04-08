@@ -21,7 +21,7 @@ export default function Newsletter() {
           {/* Left - CTA */}
           <div>
             <h2 className="text-5xl sm:text-6xl font-bold text-gray-900 leading-tight mb-6">
-              Your Smile Matters<br />
+              Your Health Matters<br />
               <span className="text-[#2BBCD4]">Connect With Us Today</span>
             </h2>
           </div>
@@ -29,7 +29,7 @@ export default function Newsletter() {
           {/* Right - Newsletter form */}
           <div>
             <p className="text-gray-500 text-sm mb-6 leading-relaxed">
-              Join our newsletter to receive the latest oral health tips, special offers and clinic updates.
+              Join our newsletter to receive the latest health tips, special offers, and hospital updates from Mukta Medicare.
             </p>
 
             {subscribed ? (

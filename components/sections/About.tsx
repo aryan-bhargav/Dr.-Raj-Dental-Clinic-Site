@@ -11,7 +11,7 @@ const teamPhotos: (string | StaticImageData)[] = [
 ];
 
 const sentence =
-  'We deliver personalized dental treatments with modern technology and gentle care ensuring healthy confident smiles for every patient.';
+  'We deliver personalized medical treatments with modern technology and compassionate care ensuring healthy lives for every patient.';
 
 const words = sentence.split(' ');
 
@@ -129,7 +129,7 @@ export default function About() {
               </div>
               <div className="ml-2">
                 <p className="text-sm font-semibold text-gray-900">Our Expert Team</p>
-                <p className="text-xs text-gray-500">Dedicated to your smile</p>
+                <p className="text-xs text-gray-500">Dedicated to your health</p>
               </div>
             </div>
           </div>
@@ -141,9 +141,9 @@ export default function About() {
           >
             {[
               { number: '98%', label: 'Satisfaction Rate', delay: 0 },
-              { number: '2k+', label: 'Smiles Transformed', delay: 100 },
-              { number: '4.9★', label: 'Customer Rating', delay: 200 },
-              { number: '40', label: 'Mins Avg Treatment', delay: 300 },
+              { number: '2k+', label: 'Lives Touched', delay: 100 },
+              { number: '4.9★', label: 'Patient Rating', delay: 200 },
+              { number: '15+', label: 'Medical Specialties', delay: 300 },
             ].map((stat) => (
               <div
                 key={stat.label}

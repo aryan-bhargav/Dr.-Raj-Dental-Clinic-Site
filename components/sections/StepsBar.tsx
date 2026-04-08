@@ -3,10 +3,10 @@
 import { useEffect, useRef, useState } from 'react'
 
 const steps = [
-  { label: 'Smile Assessment', value: 85 },
+  { label: 'Initial Consultation', value: 85 },
   { label: 'Care Planning', value: 70 },
   { label: 'Treatment Process', value: 90 },
-  { label: 'Dental Maintenance', value: 60 },
+  { label: 'Follow-up Care', value: 60 },
 ]
 
 export default function StepsBar() {

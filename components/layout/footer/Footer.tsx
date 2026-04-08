@@ -7,26 +7,26 @@ import FooterKeywords from "./Footerkeywords";
 import FooterBottom from "./Footerbottom";
 
 /**
- * Footer component for Dr. Raj Dental Clinic
+ * Footer component for Mukta Medicare
  *
  * File structure:
- *  footer/
- *  ├── Footer.tsx          ← this file (assembler)
- *  ├── footer.data.ts      ← all content/data
- *  ├── FooterIcons.tsx     ← SVG icons
- *  ├── FooterHero.tsx      ← tagline + contact + socials
- *  ├── FooterAbout.tsx     ← about column
- *  ├── FooterLinks.tsx     ← quick links column
- *  ├── FooterTimings.tsx   ← clinic hours column
- *  ├── FooterContact.tsx   ← contact details column
- *  ├── FooterKeywords.tsx  ← SEO keywords strip
- *  └── FooterBottom.tsx    ← brand + copyright bar
+ * footer/
+ * ├── Footer.tsx          ← this file (assembler)
+ * ├── footer.data.ts      ← all content/data
+ * ├── FooterIcons.tsx     ← SVG icons
+ * ├── FooterHero.tsx      ← tagline + contact + socials
+ * ├── FooterAbout.tsx     ← about column
+ * ├── FooterLinks.tsx     ← quick links column
+ * ├── FooterTimings.tsx   ← hospital hours column
+ * ├── FooterContact.tsx   ← contact details column
+ * ├── FooterKeywords.tsx  ← SEO keywords strip
+ * └── FooterBottom.tsx    ← brand + copyright bar
  *
  * Requires in tailwind.config.ts:
- *   fontFamily: { playfair: ['"Playfair Display"', 'serif'] }
+ * fontFamily: { playfair: ['"Playfair Display"', 'serif'] }
  *
  * Add to layout.tsx / _document.tsx:
- *   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+ * <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
  */
 export default function Footer() {
   return (
@@ -42,7 +42,7 @@ export default function Footer() {
         className="pointer-events-none absolute right-2 bottom-16 select-none whitespace-nowrap font-['Playfair_Display',serif] text-[clamp(72px,14vw,180px)] font-light leading-none tracking-tight text-white/[0.02]"
         aria-hidden="true"
       >
-        Dr. Raj
+        Mukta Medicare
       </span>
 
       {/* Hero band */}

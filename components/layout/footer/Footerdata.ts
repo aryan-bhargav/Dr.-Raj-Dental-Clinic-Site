@@ -17,43 +17,43 @@ export const TIMINGS = [
 ];
  
 export const CONTACT_INFO = {
-  address: "Sector‑91, Opp. Government School, Sehatpur, Faridabad, Haryana",
-  phone: "+91 99530 70999",
-  phoneHref: "tel:+919953070999",
-  email: "raj8nov@yahoo.com",
-  emailHref: "mailto:raj8nov@yahoo.com",
+  address: "P-64, opp. Keshav Vatika Park, Sector-91, Surya Nagar, Part 2, Sector 91, Faridabad, Haryana 121013",
+  phone: "+91 8851662423",
+  phoneHref: "tel:+91 9310620372",
+  email: "mukta@medicare.com",
+  emailHref: "mailto:mukta@medicare.com",
   hours: "Tue – Sun: 10 AM – 2 PM & 5 – 8:30 PM",
 };
 
 export const SOCIAL_LINKS = {
-  facebook: "https://www.facebook.com/Dr.RajDentalClinic",
-  instagram: "https://www.instagram.com",
+  facebook: "https://www.facebook.com/MuktaMedicare",
+  instagram: "https://www.instagram.com/muktamedicare/",
   youtube: "https://www.youtube.com",
 };
 
 export const SEO_KEYWORDS = [
-  "Best Dentist In Faridabad",
-  "Best Dental Clinic In Faridabad",
-  "Best Root Canal Treatment In Faridabad",
-  "Best Dental Doctor In Faridabad",
-  "Dental Clinic Near Me",
-  "Best Dentist Near Me",
-  "Best Orthodontic Treatment In Faridabad",
-  "Best Braces Doctor In Faridabad",
-  "Braces In Dental Clinic",
-  "Best Dental Surgeon In Faridabad",
-  "Top 10 Dentist In Faridabad",
-  "Top 10 Dental Clinic In Faridabad",
-  "Root Canal Treatment Dental Clinic",
-  "Best Implant Center In Faridabad",
-  "Dental Implant Center In Faridabad",
+  "Best Hospital In Faridabad",
+  "Best Medical Clinic In Faridabad",
+  "Best General Physician In Faridabad",
+  "Best Healthcare Center In Faridabad",
+  "Hospital Near Me",
+  "Best Doctor Near Me",
+  "Best Pediatric Treatment In Faridabad",
+  "Best Orthopedic Doctor In Faridabad",
+  "Emergency Medical Services",
+  "Best Gynecologist In Faridabad",
+  "Top 10 Hospitals In Faridabad",
+  "Top 10 Clinics In Faridabad",
+  "Family Health Center",
+  "Best Diagnostic Center In Faridabad",
+  "Complete Health Checkup In Faridabad",
 ];
 
 export const BRAND = {
-  name: "Dr. Raj Dental Clinic",
-  tagline: ["Your Smile Matters —", "Connect With Us Today"],
-  about: `Dr. S. Raj is a Faridabad-based celebrity smile designer — a young and dynamic Smile Specialist with an excellent flair for aesthetic dentistry. Driven by conviction, he is one of the few names to reckon with in aesthetic dentistry across Delhi, India.`,
-  copyright: "© 2021 Dr. Raj Dental Clinic. All Rights Reserved.",
-  promotedBy: "esearchsolutions.in",
-  promotedByHref: "https://esearchsolutions.in",
+  name: "Mukta Medicare",
+  tagline: ["Your Health Matters —", "Connect With Us Today"],
+  about: `Mukta Medicare is a premier Faridabad-based family hospital — a trusted and dynamic Healthcare Center dedicated to comprehensive medical care. Driven by compassion, we are one of the most reliable names for advanced medical services in the region.`,
+  copyright: "© 2026 Mukta Medicare. All Rights Reserved.",
+  promotedBy: "",
+  promotedByHref: "",
 };

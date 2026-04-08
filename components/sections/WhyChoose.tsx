@@ -4,16 +4,17 @@ import { useEffect, useRef, useState } from 'react'
 import Image, { StaticImageData } from 'next/image';
 import team2 from '../../assets/team2.png';
 import testimonialLogo from "../../assets/testimonial.jpg"
+
 const testimonials = [
   {
-    quote: "We deliver personalized dental treatments modern technology and gentle care ensuring healthy confident smiles for every patient.",
+    quote: "The care you need. The compassion you deserve. They deliver personalized medical treatments, modern technology, and gentle care ensuring healthy lives for every patient.",
     name: 'Savannah Nguyen',
     role: 'Medical Assistant',
     photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80',
   },
   {
-    quote: "The team at Dr. Raj Dental Clinic made me feel so comfortable. My smile has never looked better and the care was exceptional!",
-    name: 'Amit sharma',
+    quote: "The team at Mukta Medicare made me feel so comfortable. My health has never been better and the care was truly exceptional!",
+    name: 'Amit Sharma',
     role: 'Happy Patient',
     photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80',
   },
@@ -48,8 +49,9 @@ export default function WhyChoose() {
         <div className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
             Why Choose<br />
-            <span className="text-[#2BBCD4]">Precision Dental?</span>
+            <span className="text-[#2BBCD4]">Mukta Medicare?</span>
           </h2>
+          <p className="mt-4 text-xl text-gray-500 font-medium">Mukta Medicare – Family-Friendly Hospital</p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
@@ -58,7 +60,7 @@ export default function WhyChoose() {
             {/* Diagnostics card */}
             <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
               <p className="text-3xl font-bold text-gray-900 mb-1">98%</p>
-              <p className="text-xs text-gray-500 mb-5">Reliable Oral Health Diagnostics</p>
+              <p className="text-xs text-gray-500 mb-5">Reliable Healthcare Diagnostics</p>
               <div className="space-y-3">
                 {diagnosticsData.map((d, i) => (
                   <div key={d.label} className="flex items-center gap-3">
@@ -82,7 +84,7 @@ export default function WhyChoose() {
             <div className="relative rounded-2xl overflow-hidden h-48 bg-gray-200">
               <img
                 src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80"
-                alt="Happy dental patient"
+                alt="Happy patient"
                 className="w-full h-full object-cover object-top"
               />
             </div>
@@ -102,23 +104,23 @@ export default function WhyChoose() {
                     </div>
                   ))}
                 </div>
-                <span className="text-sm font-semibold">3.5K+ join the smiles</span>
+                <span className="text-sm font-semibold">3.5K+ trust our care</span>
               </div>
               <div className="inline-flex items-center gap-1.5 bg-white/20 rounded-full px-3 py-1 mb-3">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
-                <span className="text-xs font-semibold">Rewards</span>
+                <span className="text-xs font-semibold">Wellness</span>
               </div>
               <p className="text-sm leading-relaxed text-white/90">
-                Maintain your preventive care streak and earn exclusive whitening and cosmetic rewards.
+                Maintain your preventive health routines and experience comprehensive care for your entire family.
               </p>
             </div>
           </div>
 
-          {/* Center: Scrollable dental image */}
+          {/* Center: Scrollable medical image */}
           <div className={`relative rounded-2xl overflow-hidden min-h-[500px] bg-gray-200 transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <img
               src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?w=600&q=80"
-              alt="Dental care"
+              alt="Medical care"
               className="w-full h-full object-cover"
             />
             {/* Navigation */}
@@ -137,9 +139,9 @@ export default function WhyChoose() {
               </button>
             </div>
 
-            {/* Incomplete oral card */}
+            {/* Incomplete oral card -> Replaced with generic hospital label */}
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/70 to-transparent">
-              <p className="text-white text-sm font-medium">Complete Oral Care Solutions</p>
+              <p className="text-white text-sm font-medium">Complete Healthcare Solutions</p>
             </div>
           </div>
 
@@ -184,9 +186,8 @@ export default function WhyChoose() {
                 key={testimonialIdx}
                 className="text-gray-700 leading-relaxed transition-all duration-500"
               >
-                <span className="font-semibold text-gray-900">We deliver personalized dental treatments </span>
-                <span className="text-[#2BBCD4] font-semibold">modern </span>
-                {t.quote.replace('We deliver personalized dental treatments modern technology and gentle care ensuring healthy confident smiles for every patient.', 'technology and gentle care ensuring healthy confident smiles for every patient.')}
+                {/* Simplified dynamic rendering to avoid strict string replacement bugs */}
+                {t.quote}
               </p>
             </blockquote>
 

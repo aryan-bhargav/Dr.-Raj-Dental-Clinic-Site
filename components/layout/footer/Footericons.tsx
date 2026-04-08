@@ -96,7 +96,8 @@ export const YoutubeIcon = ({ className = "" }: { className?: string }) => (
   </svg>
 );
 
-export const ToothIcon = ({ className = "" }: { className?: string }) => (
+// Replaced ToothIcon with HospitalIcon for Mukta Medicare
+export const HospitalIcon = ({ className = "" }: { className?: string }) => (
   <svg
     className={className}
     width="18"
@@ -108,6 +109,8 @@ export const ToothIcon = ({ className = "" }: { className?: string }) => (
     strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <path d="M12 2C9 2 6 4 6 7c0 1.5.3 2.8.6 4C7 13 7 14.5 7 16c0 2.5.8 6 2.5 6 1 0 1.5-1 2.5-1s1.5 1 2.5 1C16.2 22 17 18.5 17 16c0-1.5 0-3 .4-5 .3-1.2.6-2.5.6-4 0-3-3-5-6-5z" />
+    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+    <line x1="12" y1="8" x2="12" y2="16" />
+    <line x1="8" y1="12" x2="16" y2="12" />
   </svg>
 );
